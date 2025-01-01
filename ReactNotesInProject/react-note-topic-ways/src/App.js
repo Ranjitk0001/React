@@ -6,7 +6,8 @@ import Variables from "./component/propsVariables/Variables";
 import PageNoteFound from "./component/PageNoteFound";
 import About from "./component/About";
 import ContactUs from "./component/ContactUs";
-import Api from "./component/Api/Api";
+// import Api from "./component/Api/Api";
+import Api2 from "./component/Api/Api2";
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
           <Route path="/about" element={<About />}>
             <Route path="/about/contact-Us" element={<ContactUs />} />
           </Route>
-          <Route path="/api" element={<Api />} />
+          <Route path="/api" element={<Api2 />} />
         </Routes>
       </Router>
     </>
