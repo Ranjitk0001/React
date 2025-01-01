@@ -2,7 +2,10 @@ import "./App.css";
 import Home from "./component/Home";
 import Hooks from "./component/Hooks/Hooks";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Variables from "./component/propsVariables/Variables";
+
 function App() {
+  
   return (
     <>
 
@@ -16,8 +19,11 @@ function App() {
         <Routes>
           <Route path="/hooks" element={<Hooks />} />
           <Route path="/" element={<Home />} />
+          <Route path="/props" element={<Variables/>} />
         </Routes>
       </Router>
+
+      
     </>
   );
 }
