@@ -6,33 +6,28 @@ import Variables from "./component/propsVariables/Variables";
 import PageNoteFound from "./component/PageNoteFound";
 import About from "./component/About";
 import ContactUs from "./component/ContactUs";
-
+import Api from "./component/Api/Api";
 
 function App() {
-  
   return (
     <>
-
-    
       {/* <h1>React Notes</h1> */}
 
       {/* <h1>React Notes</h1>
   <Hooks></Hooks> */}
-   
+
       <Router>
         <Routes>
           <Route path="/hooks" element={<Hooks />} />
           <Route path="/" element={<Home />} />
           <Route path="/*" element={<PageNoteFound />} />
-          <Route path="/props" element={<Variables/>} />
-          <Route path="/about" element={<About/>} >
-          <Route path="/about/contact-Us" element={<ContactUs/>} />
-          
+          <Route path="/props" element={<Variables />} />
+          <Route path="/about" element={<About />}>
+            <Route path="/about/contact-Us" element={<ContactUs />} />
           </Route>
+          <Route path="/api" element={<Api />} />
         </Routes>
       </Router>
-
-      
     </>
   );
 }

@@ -30,6 +30,9 @@ const RouteNavbar = () => {
         <li className="nav-item">
           <NavLink className="nav-link active" to={'/about'}>About</NavLink>
         </li>
+        <li className="nav-item">
+          <NavLink className="nav-link active" to={'/api'}>Api</NavLink>
+        </li>
         
         <li className="nav-item">
           <NavLink className="nav-link disabled" aria-disabled="true">Disabled</NavLink>
