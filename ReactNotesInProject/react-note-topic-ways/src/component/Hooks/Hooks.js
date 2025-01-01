@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import RouteNavbar from '../Routing/RouteNavbar';
 
 const Hooks = () => {
 
@@ -23,6 +24,8 @@ const showName=()=>{
 }
   return (
     <>
+    <RouteNavbar/>
+
       <button onClick={countUp}>Counter Up</button>
       <h1>{count}</h1>
       <button onClick={countDown}>Counter Down</button>
