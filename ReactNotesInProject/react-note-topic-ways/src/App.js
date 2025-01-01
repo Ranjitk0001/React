@@ -4,6 +4,9 @@ import Hooks from "./component/Hooks/Hooks";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Variables from "./component/propsVariables/Variables";
 import PageNoteFound from "./component/PageNoteFound";
+import About from "./component/About";
+import ContactUs from "./component/ContactUs";
+
 
 function App() {
   
@@ -22,6 +25,10 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/*" element={<PageNoteFound />} />
           <Route path="/props" element={<Variables/>} />
+          <Route path="/about" element={<About/>} >
+          <Route path="/about/contact-Us" element={<ContactUs/>} />
+          
+          </Route>
         </Routes>
       </Router>
 
