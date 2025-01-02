@@ -1,6 +1,6 @@
 import "./App.css";
 import Home from "./component/Home";
-import Hooks from "./component/Hooks/Hooks";
+import HooksUseRef2 from "./component/Hooks/HooksUseRef2";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Variables from "./component/propsVariables/Variables";
 import PageNoteFound from "./component/PageNoteFound";
@@ -22,7 +22,8 @@ function App() {
 
       <Router>
         <Routes>
-          <Route path="/hooks" element={<Hooks />} />
+          <Route path="/hooks" element={<HooksUseRef2/>} />
+          {/* <Route path="/hooks" element={<Hooks />} /> */}
           <Route path="/" element={<Home />} />
           <Route path="/*" element={<PageNoteFound />} />
           <Route path="/props" element={<Variables />} />
