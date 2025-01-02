@@ -1,6 +1,6 @@
 import "./App.css";
 import Home from "./component/Home";
-import HooksUseRef3 from "./component/Hooks/HooksUseRef3";
+// import HooksUseRef3 from "./component/Hooks/HooksUseRef3";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Variables from "./component/propsVariables/Variables";
 import PageNoteFound from "./component/PageNoteFound";
@@ -9,6 +9,7 @@ import ContactUs from "./component/ContactUs";
 // import Api3 from "./component/Api/Api3";
 import Api4 from "./component/Api/Api4";
 import MoviesApi from "./component/Api/MoviesApi";
+import HookUseContext from "./component/Hooks/HookUseContext";
 // import Api from "./component/Api/Api";
 // import Api2 from "./component/Api/Api2";
 
@@ -22,7 +23,7 @@ function App() {
 
       <Router>
         <Routes>
-          <Route path="/hooks" element={<HooksUseRef3/>} />
+          <Route path="/hooks" element={<HookUseContext/>} />
           {/* <Route path="/hooks" element={<Hooks />} /> */}
           <Route path="/" element={<Home />} />
           <Route path="/*" element={<PageNoteFound />} />
