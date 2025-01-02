@@ -8,6 +8,7 @@ import About from "./component/About";
 import ContactUs from "./component/ContactUs";
 // import Api3 from "./component/Api/Api3";
 import Api4 from "./component/Api/Api4";
+import MoviesApi from "./component/Api/MoviesApi";
 // import Api from "./component/Api/Api";
 // import Api2 from "./component/Api/Api2";
 
@@ -29,6 +30,7 @@ function App() {
             <Route path="/about/contact-Us" element={<ContactUs />} />
           </Route>
           <Route path="/api" element={<Api4 />} />
+          <Route path="/movies" element={<MoviesApi />} />
         </Routes>
       </Router>
     </>
