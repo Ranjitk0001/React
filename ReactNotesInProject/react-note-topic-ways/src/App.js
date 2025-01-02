@@ -9,7 +9,8 @@ import ContactUs from "./component/ContactUs";
 // import Api3 from "./component/Api/Api3";
 import Api4 from "./component/Api/Api4";
 import MoviesApi from "./component/Api/MoviesApi";
-import HookUseContext from "./component/Hooks/HookUseContext";
+// import HookUseContext from "./component/Hooks/HookUseContext";
+import Parent from "./component/Hooks/Parent";
 // import Api from "./component/Api/Api";
 // import Api2 from "./component/Api/Api2";
 
@@ -23,7 +24,7 @@ function App() {
 
       <Router>
         <Routes>
-          <Route path="/hooks" element={<HookUseContext/>} />
+          <Route path="/hooks" element={<Parent/>} />
           {/* <Route path="/hooks" element={<Hooks />} /> */}
           <Route path="/" element={<Home />} />
           <Route path="/*" element={<PageNoteFound />} />
