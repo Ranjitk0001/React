@@ -1,4 +1,5 @@
 import React from 'react'
+
 import RouteNavbar from './Routing/RouteNavbar'
 
 const Home = () => {
@@ -7,6 +8,7 @@ const Home = () => {
     <RouteNavbar/>
     <h1>Home page</h1>
     </>
+
   )
 }
 
