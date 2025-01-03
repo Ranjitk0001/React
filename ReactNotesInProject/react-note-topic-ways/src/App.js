@@ -16,6 +16,7 @@ import One from "./component/Hooks/useContext/One";
 // import Api2 from "./component/Api/Api2";
 
 import { createContext } from "react";
+import Count from "./component/Hooks/Redux/Count";
 
 
 const firstName = createContext();
@@ -39,6 +40,7 @@ function App() {
               <Route path="/api" element={<Api4 />} />
               <Route path="/movies" element={<MoviesApi />} />
               <Route path="/PropDrilling" element={<One />} />
+              <Route path="/redux" element={<Count />} />
             </Routes>
           </Router>
 

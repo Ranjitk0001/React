@@ -39,6 +39,9 @@ const RouteNavbar = () => {
         <li className="nav-item">
           <NavLink className="nav-link active" to={'/PropDrilling'}>Prop Drilling</NavLink>
         </li>
+        <li className="nav-item">
+          <NavLink className="nav-link active" to={'/redux'}>Hook Redux</NavLink>
+        </li>
         
         <li className="nav-item">
           <NavLink className="nav-link disabled" aria-disabled="true">Disabled</NavLink>
