@@ -19,3 +19,10 @@
     padding: 2rem;
   }
   
+  .carousel-item{
+    width: 100%;
+  }
+
+  .carousel-image {
+    width: 200px;
+  }
