@@ -11,6 +11,7 @@ import Api4 from "./component/Api/Api4";
 import MoviesApi from "./component/Api/MoviesApi";
 // import HookUseContext from "./component/Hooks/HookUseContext";
 import Parent from "./component/Hooks/Parent";
+import One from "./component/Hooks/useContext/One";
 // import Api from "./component/Api/Api";
 // import Api2 from "./component/Api/Api2";
 
@@ -34,6 +35,7 @@ function App() {
           </Route>
           <Route path="/api" element={<Api4 />} />
           <Route path="/movies" element={<MoviesApi />} />
+          <Route path="/PropDrilling" element={<One />} />
         </Routes>
       </Router>
     </>
