@@ -3,8 +3,10 @@ package com.reactspringboot.reactspringboot.controller;
 import com.reactspringboot.reactspringboot.entity.Student;
 import com.reactspringboot.reactspringboot.services.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.management.AttributeNotFoundException;
 import java.util.List;
 
 @RestController
@@ -27,5 +29,11 @@ public class StudentController {
     @GetMapping("/getStudents")
     public List<Student> getAllStudents(){
         return studentService.getAllStudents();
+    }
+
+    @GetMapping("/studentById/{id}")
+    public ResponseEntity<Student> studentById(@PathVariable long id) throws AttributeNotFoundException {
+        Student student = studentService.getStudentById(id);
+        return ResponseEntity.ok(student);
     }
 }
