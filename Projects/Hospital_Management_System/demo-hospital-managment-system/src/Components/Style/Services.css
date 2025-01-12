@@ -27,3 +27,4 @@
   .carousel-image {
     width: 200px;
   }
+  .transform-card { transform: translateZ(100px); }
