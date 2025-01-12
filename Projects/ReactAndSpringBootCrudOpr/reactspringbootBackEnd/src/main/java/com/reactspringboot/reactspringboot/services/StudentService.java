@@ -24,4 +24,12 @@ public class StudentService {
         return studentRepository.findById(id)
                 .orElseThrow(() -> new AttributeNotFoundException("Student not found with id " + id));
     }
+
+    public Student updateStudent(long id, Student updatedStudent) throws AttributeNotFoundException {
+        Student student = studentRepository.findById(id) .orElseThrow(() -> new AttributeNotFoundException("Student not found with id " + id));
+        student.setAge(updatedStudent.getAge());
+        student.setDept(updatedStudent.getDept());
+        student.setName(updatedStudent.getName());
+        return studentRepository.save(student);
+    }
 }

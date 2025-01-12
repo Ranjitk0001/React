@@ -36,4 +36,10 @@ public class StudentController {
         Student student = studentService.getStudentById(id);
         return ResponseEntity.ok(student);
     }
+
+    @PutMapping("/updateStudent/{id}")
+    public ResponseEntity<Student> updateStudentC(@PathVariable long id, @RequestBody Student updatedStudent) throws AttributeNotFoundException {
+        Student savedStudent = studentService.updateStudent(id, updatedStudent);
+        return ResponseEntity.ok(savedStudent);
+    }
 }
