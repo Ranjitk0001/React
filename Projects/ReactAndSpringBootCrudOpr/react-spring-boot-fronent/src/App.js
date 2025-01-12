@@ -14,8 +14,8 @@ function App() {
        
          <Router>
         <Routes>
-          <Route path="/list" element={<StudentLIst />} />
-          <Route path="/" element={<StudentAdd />} />
+          <Route path="/" element={<StudentLIst />} />
+          <Route path="/add-student" element={<StudentAdd />} />
         </Routes>
       </Router>
     </>
