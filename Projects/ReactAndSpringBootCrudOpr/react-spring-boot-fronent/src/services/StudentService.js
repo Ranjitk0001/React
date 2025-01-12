@@ -8,6 +8,10 @@ class StudentService {
     createStudent(student){
         return axios.post(BASE_REST_API_URL+'/addStudent', student);
     }
+
+    deleteStudent(studentId){
+        return axios.delete(BASE_REST_API_URL + '/deleteStudent/' + studentId);
+    }
 }
 
 export default new StudentService();

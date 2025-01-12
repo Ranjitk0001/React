@@ -14,11 +14,21 @@ const StudentLIst = () => {
       .then((response) => {
         setStudent(response.data);
         console.log(response.data);
-      })
-      .catch((error) => {
+      }).catch((error) => {
         console.log(error);
       });
   };
+
+  const deleteStudent = (studentId) => {
+    StudentService.deleteStudent(studentId).then((response) =>{
+      getAllStudents();
+
+    }).catch(error =>{
+        console.log(error);
+    })
+     
+ }
+
   return (
     <>
       <RouteNavbar />
@@ -33,6 +43,7 @@ const StudentLIst = () => {
               <th scope="col">Name</th>
               <th scope="col">Age</th>
               <th scope="col">Department</th>
+              <th> Actions </th>
             </tr>
           </thead>
           <tbody>
@@ -44,6 +55,11 @@ const StudentLIst = () => {
                             <td>{students.name}</td>
                             <td>{students.age}</td>
                             <td>{students.dept}</td>
+                            <td>
+                                <button className="btn btn-info">Edit</button>
+                                <button className = "btn btn-danger" onClick = {() => deleteStudent(students.id)}
+                                    style = {{marginLeft:"10px"}}> Delete</button>
+                            </td>
                         </tr>
                 )
 
