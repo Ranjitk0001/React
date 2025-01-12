@@ -1,26 +1,60 @@
-import React from 'react'
-
-import RouteNavbar from './RouteNavbar'
+import React, { useEffect, useState } from "react";
+import StudentService from "../services/StudentService";
+import RouteNavbar from "./RouteNavbar";
 
 const StudentLIst = () => {
+  const [students, setStudent] = useState([]);
+
+  useEffect(() => {
+    getAllStudents();
+  }, []);
+
+  const getAllStudents = () => {
+    StudentService.getAllStudents()
+      .then((response) => {
+        setStudent(response.data);
+        console.log(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   return (
     <>
-     <RouteNavbar/>
+      <RouteNavbar />
       <h1>Student List</h1>
-       <div className="container mt-5">
-           <h1>Bootstrap Table Example</h1> 
-           <table className="table table-striped table-hover"> 
-            <thead> <tr> 
-              <th scope="col">#</th>
-               <th scope="col">First Name</th>
-                <th scope="col">Last Name</th> 
-                <th scope="col">Email</th> </tr> </thead> 
-                <tbody> <tr> <th scope="row">1</th> 
-                <td>John</td> <td>Doe</td> <td>john.doe@example.com</td> </tr> 
-                <tr> <th scope="row">2</th> <td>Jane</td> <td>Smith</td> <td>jane.smith@example.com</td> 
-                </tr> </tbody></table></div>
-    </>
-  )
-}
+      <div className="container mt-5">
+        <h1>Bootstrap Table Example</h1>
+        <table className="table table-striped table-hover">
+          <thead>
+            
+            <tr>
+              <th scope="col">Id</th>
+              <th scope="col">Name</th>
+              <th scope="col">Age</th>
+              <th scope="col">Department</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+                students.map(
+                    students=>(
+                        <tr key={students.id}>
+                            <th scope="row">{students.id}</th>
+                            <td>{students.name}</td>
+                            <td>{students.age}</td>
+                            <td>{students.dept}</td>
+                        </tr>
+                )
 
-export default StudentLIst
+            )
+            }
+
+          </tbody>
+        </table>
+      </div>
+    </>
+  );
+};
+
+export default StudentLIst;
