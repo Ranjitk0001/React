@@ -7,7 +7,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.management.AttributeNotFoundException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/v1")
@@ -42,4 +44,14 @@ public class StudentController {
         Student savedStudent = studentService.updateStudent(id, updatedStudent);
         return ResponseEntity.ok(savedStudent);
     }
+
+    @DeleteMapping("/deleteStudent/{id}")
+    public ResponseEntity<Map<String, Boolean>> deleteStudent(@PathVariable int id) throws AttributeNotFoundException {
+        studentService.deleteStudent(id);
+        Map<String, Boolean> response = new HashMap<>();
+        response.put("Deleted", Boolean.TRUE);
+        return ResponseEntity.ok(response);
+
+    }
+
 }

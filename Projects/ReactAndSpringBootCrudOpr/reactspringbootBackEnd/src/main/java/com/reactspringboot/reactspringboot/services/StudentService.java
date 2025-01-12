@@ -32,4 +32,9 @@ public class StudentService {
         student.setName(updatedStudent.getName());
         return studentRepository.save(student);
     }
+
+    public void deleteStudent(long id) throws AttributeNotFoundException {
+        Student student = studentRepository.findById(id) .orElseThrow(() -> new AttributeNotFoundException("Student not found with id " + id));
+        studentRepository.delete(student);
+    }
 }
