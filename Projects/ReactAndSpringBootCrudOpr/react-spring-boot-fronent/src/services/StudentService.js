@@ -12,6 +12,18 @@ class StudentService {
     deleteStudent(studentId){
         return axios.delete(BASE_REST_API_URL + '/deleteStudent/' + studentId);
     }
+
+    updateStudent(studentId, student){
+        return axios.put(BASE_REST_API_URL + '/updateStudent/' +studentId, student);
+    }
+
+    getStudentById(studentId){
+        return axios.get(BASE_REST_API_URL + '/studentById/' + studentId);
+    }
+
 }
 
-export default new StudentService();
+// export default new StudentService();
+
+const instance = new StudentService();
+export default instance;

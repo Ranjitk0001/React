@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import StudentLIst from './components/StudentLIst';
 import StudentAdd from './components/StudentAdd';
+import StudentUpdate from './components/StudentUpdate';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<StudentLIst />} />
           <Route path="/add-student" element={<StudentAdd />} />
+          <Route path="/edit-student/:id" element={<StudentUpdate />} />
         </Routes>
       </Router>
     </>

@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import StudentService from "../services/StudentService";
 import RouteNavbar from "./RouteNavbar";
+import { Link } from "react-router-dom";
 
-const StudentLIst = () => {
+const StudentList = () => {
   const [students, setStudent] = useState([]);
 
   useEffect(() => {
@@ -20,14 +21,12 @@ const StudentLIst = () => {
   };
 
   const deleteStudent = (studentId) => {
-    StudentService.deleteStudent(studentId).then((response) =>{
+    StudentService.deleteStudent(studentId).then((response) => {
       getAllStudents();
-
-    }).catch(error =>{
-        console.log(error);
-    })
-     
- }
+    }).catch((error) => {
+      console.log(error);
+    });
+  };
 
   return (
     <>
@@ -37,7 +36,6 @@ const StudentLIst = () => {
         <h1>Bootstrap Table Example</h1>
         <table className="table table-striped table-hover">
           <thead>
-            
             <tr>
               <th scope="col">Id</th>
               <th scope="col">Name</th>
@@ -48,24 +46,19 @@ const StudentLIst = () => {
           </thead>
           <tbody>
             {
-                students.map(
-                    students=>(
-                        <tr key={students.id}>
-                            <th scope="row">{students.id}</th>
-                            <td>{students.name}</td>
-                            <td>{students.age}</td>
-                            <td>{students.dept}</td>
-                            <td>
-                                <button className="btn btn-info">Edit</button>
-                                <button className = "btn btn-danger" onClick = {() => deleteStudent(students.id)}
-                                    style = {{marginLeft:"10px"}}> Delete</button>
-                            </td>
-                        </tr>
-                )
-
-            )
+              students.map((student) => (
+                <tr key={student.id}>
+                  <th scope="row">{student.id}</th>
+                  <td>{student.name}</td>
+                  <td>{student.age}</td>
+                  <td>{student.dept}</td>
+                  <td>
+                    <Link className="btn btn-info" to={`/edit-student/${student.id}`}>Update</Link>
+                    <button className="btn btn-danger" onClick={() => deleteStudent(student.id)} style={{ marginLeft: "10px" }}> Delete</button>
+                  </td>
+                </tr>
+              ))
             }
-
           </tbody>
         </table>
       </div>
@@ -73,4 +66,4 @@ const StudentLIst = () => {
   );
 };
 
-export default StudentLIst;
+export default StudentList;
