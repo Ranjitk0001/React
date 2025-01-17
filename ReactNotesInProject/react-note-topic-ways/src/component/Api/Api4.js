@@ -1,7 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import RouteNavbar from "../Routing/RouteNavbar";
+import { firstName, lastName } from "../../App";
+
 
 const Api4 = () => {
+
+  const fname=useContext(firstName);
+  const lname= useContext(lastName);
+
   const [data, setData] = useState([]);
   const getData = async () => {
     const res = await fetch("https://jsonplaceholder.typicode.com/users");
@@ -49,6 +55,8 @@ const Api4 = () => {
           })}
         </tbody>
       </table>
+
+      <h3>First name is <b>{fname} </b>and the Last name is <b>{lname} </b></h3>
     </>
   );
 };

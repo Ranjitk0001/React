@@ -30,9 +30,6 @@ const showName=()=>{
       <h1>{count}</h1>
       <button onClick={countDown}>Counter Down</button>
 
-
-
-      <h1>Name</h1>
       <h1>{name}</h1>
       <button onClick={showName}>React</button>
     </>

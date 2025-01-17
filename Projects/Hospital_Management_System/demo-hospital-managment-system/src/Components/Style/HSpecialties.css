@@ -1,0 +1,17 @@
+.headbordergr {
+  display: block; /* or inline-block if you prefer */
+  width: 18%;
+  /* Adjust as needed */
+  height: 5px; /* Adjust as needed */
+  background-color: rgb(233, 96, 16); /* Change to the desired color */
+}
+
+/* styles.css */
+.scroll-container {
+  display: flex;
+  overflow-x: auto;
+  padding: 10px;
+}
+.card {
+  margin: 10px;
+}
