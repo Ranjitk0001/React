@@ -1,14 +1,32 @@
 import "./App.css";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+ 
+} from "react-router-dom";
+import Home from "./component/Home";
+import Login from "./component/Login";
+import Register from "./component/Register";
 
 function App() {
   return (
     <>
-      <h1> Login And Resitration </h1>
-      <div className="container">
+      {/* <div className="container">
       
         <h1 className="text-center">Hello, Bootstrap!</h1>
         <button className="btn btn-primary">Click me</button>
-      </div>
+      </div> */}
+
+      
+
+      <Router>
+          <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login/>} />
+          <Route path="/register" element={<Register/>} />
+        </Routes>
+      </Router>
     </>
   );
 }
