@@ -5,10 +5,11 @@ const Login = () => {
   return (
     <>
     <Navbar />
-    <h1>Welcome to Home page</h1>
+      <h1>Welcome to Home page</h1>
 
     </>
   )
+ 
 }
 
 export default Login
