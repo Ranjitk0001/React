@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" version="26.0.6" pages="3">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" version="26.0.6" pages="4">
   <diagram name="Page-1" id="SIMWVTKqntyELv9S9b01">
     <mxGraphModel dx="1050" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="4681" pageHeight="3300" math="0" shadow="0">
       <root>
@@ -80,6 +80,22 @@
         <UserObject label="&lt;a href=&quot;https://github.com/Ranjitk0001/React/tree/rk/Projects/Spring%20Security/csrf-springsecurity2&quot;&gt;React/Projects/Spring Security/csrf-springsecurity2 at rk · Ranjitk0001/React&lt;/a&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" link="https://www.draw.io" id="Kki8pWN1e9ykU1zeOh3V-15">
           <mxCell style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;align=center;verticalAlign=middle;fontColor=#0000EE;fontStyle=4;" vertex="1" parent="1">
             <mxGeometry x="210" y="850" width="400" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="wmA7DuwlleVXuQsigCIp" name="Page-4">
+    <mxGraphModel dx="1050" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="4681" pageHeight="3300" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="lcrd0RSrknHy_B45AJbr-4" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Spring configuration basic&lt;/h1&gt;&lt;p&gt;&lt;b&gt;only using user and password but not csrf( Combinatio cross-site request&amp;nbsp; forgery )&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/p&gt;&lt;p&gt;ONLY USER AND PASSWORD USING PUT ,POST ,DELETE BUT NOT USE CSRF (KEY ,VALUE)&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;YOU CAN PREBIOUS POST MA N&amp;nbsp; API BUT NOT USES&amp;nbsp;&lt;/p&gt;&lt;p&gt;HEADER :-&amp;nbsp;&lt;/p&gt;&lt;p&gt;&amp;nbsp;KEY,VALUE&amp;nbsp;&amp;nbsp;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="140" y="280" width="740" height="530" as="geometry" />
+        </mxCell>
+        <UserObject label="https://github.com/Ranjitk0001/React/tree/rk/Projects/Spring%20Security/securityConfiguration-springsecurity3" link="https://github.com/Ranjitk0001/React/tree/rk/Projects/Spring%20Security/securityConfiguration-springsecurity3" id="lcrd0RSrknHy_B45AJbr-5">
+          <mxCell style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;align=center;verticalAlign=middle;fontColor=#0000EE;fontStyle=4;" vertex="1" parent="1">
+            <mxGeometry x="160" y="505" width="550" height="80" as="geometry" />
           </mxCell>
         </UserObject>
       </root>
